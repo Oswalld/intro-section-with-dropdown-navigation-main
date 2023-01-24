@@ -23,4 +23,148 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+* {
+  font-family: "Epilogue", sans-serif;
+}
+
+body {
+  background-color: hsl(0deg, 0%, 98%);
+}
+
+.voile-noir-mobile {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.75;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+header .menu-right-desktop {
+  display: none;
+}
+header .menu-right-mobile {
+  z-index: 500;
+}
+header .menu-right-mobile .cross-icon {
+  display: none;
+}
+header #menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: white;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  padding: 78px 24px;
+  width: 240px;
+  z-index: 400;
+  color: hsl(0deg, 0%, 41%);
+}
+header #menu a {
+  color: hsl(0deg, 0%, 41%);
+}
+header #menu .menu-items {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  gap: 17px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+header #menu .menu-items img {
+  height: 100%;
+}
+header #menu .menu-sub-items a {
+  display: flex;
+  align-items: center;
+  gap: 15.5px;
+  margin-left: 23px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0px;
+}
+header #menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0 8px 0;
+}
+header #menu .menu-login-mobile {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0px;
+}
+header #menu .menu-login-mobile button {
+  background-color: transparent;
+  border: 1.5px solid hsl(0deg, 0%, 41%);
+  padding: 13px;
+  border-radius: 15px;
+  color: hsl(0deg, 0%, 41%);
+  width: 195px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 47.75px;
+}
+.hero .left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 16px;
+  text-align: center;
+}
+.hero .left h1 {
+  margin-bottom: 16px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: -0.5px;
+  color: #151515;
+}
+.hero .left p {
+  margin-bottom: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0px;
+}
+.hero .left a button {
+  margin-bottom: 48px;
+  background-color: #151515;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 12px;
+  color: hsl(0deg, 0%, 98%);
+}
+.hero .left .brands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28.6px;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=style.css.map */

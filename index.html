@@ -18,24 +18,89 @@
 </head>
 <body>
 
-  Features
-  Company
-  Careers
-  About
+<div class="voile-noir-mobile"></div>
 
-  Login
-  Register
+<header>
+  <div class="menu-left">
+    <a href="#"><img src="/images/logo.svg" alt=""></a>
+    
+    <ul id="menu">
+      <li>
+        <div class="menu-items features">
+          <img class="features-arrow" src="/images/icon-arrow-down.svg" alt="">
+          Features
+        </div>
+        <ul>
+          <li class="menu-sub-items"><a href="#"> <img src="/images/icon-todo.svg" alt=""> Todo List</a></li>
+          <li class="menu-sub-items"><a href="#"> <img src="/images/icon-calendar.svg" alt=""> Calendar</a></li>
+          <li class="menu-sub-items"><a href="#"> <img src="/images/icon-reminders.svg" alt=""> Reminders</a></li>
+          <li class="menu-sub-items"><a href="#"> <img src="/images/icon-planning.svg" alt=""> Planning</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="menu-items company">
+          <img class="company-arrow" src="/images/icon-arrow-down.svg" alt="">
+          Company
+        </div>
+        <ul>
+          <li class="menu-sub-items"><a href="#">History</a></li>
+          <li class="menu-sub-items"><a href="#">Our Team</a></li>
+          <li class="menu-sub-items"><a href="#">Blog</a></li>
+        </ul>
+      </li>
+      <li class="menu-items"><a href="">Careers</a></li>
+      <li class="menu-items"><a href="">About</a></li>
 
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+      <div class="menu-login-mobile">
+        <a href="#">Login</a>
+        <a href="#"><button>Register</button></a>
+      </div>
+    </ul>
   </div>
+      
+  <div class="menu-right-desktop">
+    <a href="#">Login</a>
+    <a href="#"><button>Register</button></a>
+  </div>
+
+  <div class="menu-right-mobile">
+    <svg class="menu-icon" width="32" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="#151515" fill-rule="evenodd"><path d="M0 0h32v2H0zM0 8h32v2H0zM0 16h32v2H0z"/></g></svg>
+    <svg class="cross-icon" width="26" height="26" xmlns="http://www.w3.org/2000/svg"><g fill="#151515" fill-rule="evenodd"><path d="m2.393.98 22.628 22.628-1.414 1.414L.979 2.395z"/><path d="M.98 23.607 23.609.979l1.414 1.414L2.395 25.021z"/></g></svg>
+  </div>
+</header>
+
+<section class="hero">
+  <picture class="right">
+    <source
+      media="(min-width: 1024px)"
+      srcset="/images/image-hero-desktop.png"
+    />
+  
+    <source
+      srcset="/images/image-hero-mobile.png"
+    />
+  
+    <img
+      src="/images/image-hero-mobile.png"
+      alt=""
+    />
+  </picture>
+  
+    <div class="left">
+      <h1>Make remote work</h1>
+      <p>
+        Get your team in sync, no matter your location. Streamline processes,
+        create team rituals, and watch productivity soar.
+      </p>
+      <a href="#"><button>Learn more</button></a>
+      <div class="brands">
+        <img src="/images/client-databiz.svg" alt="">
+        <img src="/images/client-audiophile.svg" alt="">
+        <img src="/images/client-meet.svg" alt="">
+        <img src="/images/client-maker.svg" alt="">
+      </div>
+    </div>
+</section>
+
 </body>
 </html>
