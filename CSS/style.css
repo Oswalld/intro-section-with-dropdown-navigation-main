@@ -163,6 +163,7 @@ header #menu .menu-login-mobile button {
   font-weight: 500;
   line-height: 26px;
   letter-spacing: 0px;
+  color: hsl(0deg, 0%, 41%);
 }
 .hero .left a button {
   margin-bottom: 48px;
