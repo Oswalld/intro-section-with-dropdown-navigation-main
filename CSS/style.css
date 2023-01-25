@@ -34,6 +34,7 @@ body {
 }
 
 .voile-noir-mobile {
+  display: none;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -41,6 +42,10 @@ body {
   left: 0;
   background-color: black;
   opacity: 0.75;
+}
+
+.show {
+  display: flex !important;
 }
 
 header {
@@ -60,7 +65,7 @@ header .menu-right-mobile .cross-icon {
 }
 header #menu {
   position: absolute;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 16px;
   background-color: white;
@@ -89,6 +94,7 @@ header #menu .menu-items {
 }
 header #menu .menu-items img {
   height: 100%;
+  transform: rotate(0deg);
 }
 header #menu .menu-sub-items a {
   display: flex;
@@ -105,7 +111,7 @@ header #menu .menu-sub-items a img {
   margin-bottom: 4px;
 }
 header #menu ul {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 16px;
   padding: 24px 0 8px 0;
@@ -134,6 +140,7 @@ header #menu .menu-login-mobile button {
   display: flex;
   flex-direction: column;
   gap: 47.75px;
+  align-items: center;
 }
 .hero .left {
   display: flex;
@@ -160,6 +167,7 @@ header #menu .menu-login-mobile button {
 .hero .left a button {
   margin-bottom: 48px;
   background-color: #151515;
+  font-weight: 900;
   border: none;
   padding: 12px 22px;
   border-radius: 12px;
@@ -171,4 +179,168 @@ header #menu .menu-login-mobile button {
   align-items: center;
   gap: 28.6px;
   flex-wrap: wrap;
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    padding: 24px 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+    flex-direction: row;
+  }
+  header .menu-left {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+  }
+  header .menu-login-mobile {
+    display: none !important;
+  }
+  header .menu-right-desktop {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  header .menu-right-desktop a {
+    font-size: 14px;
+    line-height: 16px;
+    color: hsl(0deg, 0%, 41%);
+  }
+  header .menu-right-desktop a:hover {
+    color: #151515;
+  }
+  header .menu-right-desktop button {
+    background-color: transparent;
+    padding: 13px 22px;
+    border: 1.5px solid hsl(0deg, 0%, 41%);
+    color: hsl(0deg, 0%, 41%);
+    border-radius: 15px;
+  }
+  header .menu-right-desktop button:hover {
+    cursor: pointer;
+    color: #151515;
+    border-color: #151515;
+  }
+  header .menu-right-mobile {
+    display: none;
+  }
+  header .menu-right-mobile .cross-icon {
+    display: none;
+  }
+  header #menu {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    background-color: transparent;
+    align-items: center;
+    padding: 0;
+    width: auto;
+    color: hsl(0deg, 0%, 41%);
+  }
+  header #menu a {
+    color: hsl(0deg, 0%, 41%);
+  }
+  header #menu .menu-items {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    cursor: pointer;
+    gap: 17px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  header #menu .menu-items:hover {
+    color: #151515;
+  }
+  header #menu .menu-items a:hover {
+    color: #151515;
+  }
+  header #menu .menu-items img {
+    height: 100%;
+    transform: rotate(0deg);
+  }
+  header #menu .menu-sub-items a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+  header #menu .menu-sub-items a:hover {
+    color: #151515;
+  }
+  header #menu .menu-sub-items a img {
+    height: 16px;
+    margin-bottom: 0px;
+  }
+  header #menu ul {
+    display: none;
+    position: absolute;
+    padding: 24px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1490196078);
+    margin-top: 20px;
+  }
+  header #menu .menu-features {
+    left: -60px;
+  }
+  .hero {
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 125px;
+    max-width: 1440px;
+    padding: 0 130px;
+    margin: 67px auto 0 auto;
+  }
+  .hero .left {
+    align-items: flex-start;
+    padding: 0 0 0 35px;
+    text-align: left;
+  }
+  .hero .left h1 {
+    margin-bottom: 48px;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: -1.1111111641px;
+    color: #151515;
+    max-width: 528px;
+  }
+  .hero .left p {
+    margin-bottom: 51px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0px;
+  }
+  .hero .left a button {
+    margin-bottom: 0px;
+    background-color: #151515;
+    border: 1.5px solid #151515;
+    padding: 15px 30px;
+    border-radius: 13px;
+  }
+  .hero .left a button:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: #151515;
+  }
+  .hero .left .brands {
+    gap: 40.5px;
+    margin-top: 108px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    align-items: flex-end;
+  }
 }/*# sourceMappingURL=style.css.map */

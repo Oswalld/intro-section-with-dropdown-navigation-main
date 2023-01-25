@@ -6,6 +6,7 @@ body{
 }
 
 .voile-noir-mobile{
+    display: none;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -13,6 +14,10 @@ body{
     left: 0;
     background-color: black;
     opacity: 0.75;
+}
+
+.show{
+    display: flex !important;
 }
 
 header{
@@ -34,7 +39,7 @@ header{
 
     #menu{
         position: absolute;
-        display: flex;
+        display: none;
         flex-direction: column;
         gap: 16px;
         background-color: white;
@@ -63,6 +68,7 @@ header{
             text-align: left;
             img{
                 height: 100%;
+                transform: rotate(0deg);
             }
         }
 
@@ -84,7 +90,7 @@ header{
         }
 
         ul{
-            display: flex;
+            display: none;
             flex-direction: column;
             gap: 16px;
             padding: 24px 0 8px 0;
@@ -121,6 +127,7 @@ header{
     display: flex;
     flex-direction: column;
     gap: 47.75px;
+    align-items: center;
 
     .left{
         display: flex;
@@ -151,6 +158,7 @@ header{
         a button{
             margin-bottom: 48px;
             background-color: #151515;
+            font-weight: 900;
             border: none;
             padding: 12px 22px;
             border-radius: 12px;
@@ -166,3 +174,195 @@ header{
         }
     }
 }
+
+
+
+@media screen and ( min-width:1024px ) {
+    header{
+        padding: 24px 40px;
+        max-width: 1440px;
+        margin: 0 auto;
+        flex-direction: row;
+
+        .menu-left{
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+        .menu-login-mobile{
+            display: none !important;
+        }
+        .menu-right-desktop{
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            a{
+                font-size: 14px;
+                line-height: 16px;
+                color: $Medium-Gray;
+                &:hover{
+                    color: #151515;
+                }
+            }
+
+            button{
+                background-color: transparent;
+                padding: 13px 22px;
+                border: 1.5px solid $Medium-Gray;
+                color: $Medium-Gray;
+                border-radius: 15px;
+
+                &:hover{
+                    cursor: pointer;
+                    color: #151515;
+                    border-color: #151515;
+                }
+            }
+        }
+        .menu-right-mobile{
+            display: none;
+            
+            .cross-icon{
+                display: none;
+            }
+        }
+    
+        #menu{
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            background-color: transparent;
+            align-items: center;
+            padding: 0;
+            width: auto;
+            color: $Medium-Gray;
+    
+            a{
+                color: $Medium-Gray;
+            }
+    
+            .menu-items{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                flex-direction: row-reverse;
+                cursor: pointer;
+                gap: 17px;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 16px;
+                letter-spacing: 0px;
+                text-align: left;
+                &:hover{
+                    color: #151515;
+                }
+                a:hover{
+                    color: #151515;
+                }
+                img{
+                    height: 100%;
+                    transform: rotate(0deg);
+                }
+            }
+    
+            .menu-sub-items a{
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                margin-left: 0;
+    
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 16px;
+
+                &:hover{
+                    color: #151515;
+                }
+    
+                img{
+                    height: 16px;
+                    margin-bottom: 0px;
+                }
+            }
+    
+            ul{
+                display: none;
+                position: absolute;
+                padding: 24px;
+                background-color: white;
+                border-radius: 20px;
+                box-shadow: 0px 10px 40px 0px #00000026;
+                margin-top: 20px;
+            }
+
+            .menu-features{
+                left: -60px;
+            }
+            
+        }
+    
+    }
+
+    // BRAND-----------------------------------------------------------
+
+    .hero{
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 125px;
+        
+        max-width: 1440px;
+        padding: 0 130px;
+        margin: 67px auto 0 auto;
+    
+        .left{
+            align-items: flex-start;
+            padding: 0 0 0 35px;
+            text-align: left;
+    
+            h1{
+                margin-bottom: 48px;
+                font-size: 80px;
+                font-weight: 700;
+                line-height: 80px;
+                letter-spacing: -1.1111111640930176px;
+                color: #151515;
+                max-width: 528px;
+            }
+    
+            p{
+                margin-bottom: 51px;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 28px;
+                letter-spacing: 0px;
+            }
+    
+            a button{
+                margin-bottom: 0px;
+                background-color: #151515;
+                border: 1.5px solid #151515;
+                padding: 15px 30px;
+                border-radius: 13px;
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: transparent;
+                    color: #151515;
+                }
+            }
+    
+            .brands{
+                gap: 40.5px;
+                margin-top: 108px;
+            }
+        }
+    }
+}
+
+@media screen and ( min-width:1280px ) {
+    .hero{
+        align-items: flex-end;
+    }
+    }
